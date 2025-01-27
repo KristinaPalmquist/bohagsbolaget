@@ -1,0 +1,216 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+  --vt-c-white-transparent: rgba(242, 242, 242, 0.8);
+  --white-gradient-start: rgba(255, 255, 255, 1);
+  --white-gradient-end: rgba(255, 255, 255, 0);
+  --light-modal-overlay: rgba(255, 255, 255, 0.9);
+  --light-modal-background: rgba(0, 0, 0, 0.05);
+  --light-hero-overlay: rgba(0, 0, 0, 0.2);
+  --light-link-color: var(--color-7);
+  --light-button-gradient: linear-gradient(
+    1deg,
+    var(--color-2),
+    var(--color-7) 99%
+  );
+  --light-input-border: 1px solid #ccc;
+  --light-title: url("/assets/logos/black_name_transparent_bg.png")
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+  --vt-c-black-transparent: rgba(40, 40, 40, 0.8);
+  --black-gradient-start: rgba(18, 18, 18, 1);
+  --black-gradient-end: rgba(18, 18, 18, 0);
+  --dark-modal-overlay: rgba(0, 0, 0, 0.8);
+  --dark-modal-background: rgba(255, 255, 255, 0.1);
+  --dark-hero-overlay: rgba(0, 0, 0, 0.2);
+  --dark-link-color: var(--color-11);
+  --dark-button-gradient: linear-gradient(
+    1deg,
+    var(--color-4),
+    var(--color-11) 99%
+  );
+  --dark-input-border: 1px solid #555;
+  --dark-title: url("/assets/logos/white_text_transparent_bg.png")
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-1: #281b15;
+  --color-2: #3c4c4f;
+  --color-3: #4f443e;
+  --color-4: #552416;
+  --color-5: #6e6664;
+  --color-6: #708593;
+  --color-7: #7494b4;
+  --color-8: #7d4433;
+  --color-9: #8f431d;
+  --color-10: #9c8176;
+  --color-11: #b53d12;
+  --color-12: #bcb2b5;
+  --color-13: #d9c4ba;
+  --color-14: #eb8f5b;
+
+  --button-1-color: #fafbfc;
+  --button-2-color: #c4c4c4;
+
+  --gradient-start: var(--white-gradient-start);
+  --gradient-end: var(--white-gradient-end);
+
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+  --color-background-transparent: var(--vt-c-white-transparent);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+  --title: var(--light-title);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+    --color-background-transparent: var(--vt-c-black-transparent);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+
+    --gradient-start: var(--black-gradient-start);
+    --gradient-end: var(--black-gradient-end);
+    --modal-overlay: var(--dark-modal-overlay);
+
+    --modal-background: var(--dark-modal-background);
+    --title: var(--dark-title);
+  }
+}
+
+[data-theme='light'] {
+  --button-1-color: #fafbfc;
+  --button-2-color: #c4c4c4;
+
+  --gradient-start: var(--white-gradient-start);
+  --gradient-end: var(--white-gradient-end);
+
+  --card-color: var(--color-13);
+  --background-color: #fff;
+  --background-gradient: linear-gradient(190deg, #9bc7f3, #d0c5c8);
+  --footer-background-color: var(--vt-c-white-soft);
+  --border-color: var(--color-7);
+  --form-background: var(--color-12);
+  --modal-overlay: var(--light-modal-overlay);
+  --modal-background: var(--light-modal-background);
+  --hero-overlay: var(--light-hero-overlay);
+  --text-color: #000;
+  --link-color: var(--light-link-color);
+  --button-gradient: var(--light-button-gradient);
+  --input-border: var(--light-input-border);
+
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+  --color-background-transparent: var(--vt-c-white-transparent);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+
+
+  --title: var(--light-title);
+}
+
+[data-theme='dark'] {
+  --card-color: var(--color-1);
+  --background-color: var(--vt-c-black);
+  --background-gradient: linear-gradient(190deg, #411403, var(--vt-c-black));
+  --footer-background-color: #000;
+  --border-color: var(--color-11);
+  --form-background: var(--color-5);
+  --modal-overlay: var(--dark-modal-overlay);
+  --modal-background: var(--dark-modal-background);
+  --hero-overlay: var(--dark-hero-overlay);
+  --text-color: #fff;
+  --link-color: var(--dark-link-color);
+  --button-gradient: var(--dark-button-gradient);
+  --input-border: var(--dark-input-border);
+
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+  --color-background-transparent: var(--vt-c-black-transparent);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+
+
+  --title: var(--dark-title);
+
+  --gradient-start: var(--black-gradient-start);
+  --gradient-end: var(--black-gradient-end);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+:root {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--background-color);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  /* font-family: Helvetica, Arial, sans-serif; */
+
+  font-family: 'JetBrains Mono', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.2rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

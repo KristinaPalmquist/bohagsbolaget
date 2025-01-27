@@ -4,21 +4,24 @@ const testimonials = [
     id: 1,
     name: 'John Doe',
     position: 'CEO, Company',
-    image: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
+    image:
+      'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
     quote: 'This is an amazing product! It has changed my life for the better.',
   },
   {
     id: 2,
-    name: 'Jane Smith',
+    name: 'Jane Smithsonian',
     position: 'CTO, Another Company',
-    image: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
+    image:
+      'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
     quote: 'I love using this product. It has made my work so much easier.',
   },
   {
     id: 3,
-    name: 'Sam Wilson',
+    name: 'Sammy Wilson',
     position: 'Developer, Tech Company',
-    image: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
+    image:
+      'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
     quote: 'A must-have tool for any professional. Highly recommended!',
   },
 ];
@@ -56,7 +59,6 @@ const testimonials = [
   background-color: #f7fafc;
   /* padding: 3rem 0; */
 }
-
 
 .header {
   text-align: center;

@@ -5,7 +5,6 @@ import { useStore } from '@/store';
 import MainNavbar from '@/components/MainNavbar.vue';
 import LanguageToggle from '@/components/LanguageToggle.vue';
 import ThemeToggle from './ThemeToggle.vue';
-import SearchBar from './SearchBar.vue';
 
 const router = useRouter();
 const route = { name: 'Home', path: '/' };
@@ -53,7 +52,6 @@ const checkIfMobile = () => {
 
 const handleRouting = (event, path) => {
   event.preventDefault();
-  store.resetSearchQuery();
   router.push(path);
   isOpen.value = false;
 };
@@ -126,9 +124,7 @@ watch(headerHeight, (newHeight) => {
         <div class="logo" :style="{ backgroundImage: logo }"></div>
       </a>
       <div class="nav-btns">
-        <div class="search">
-          <SearchBar v-if="!isOpen" />
-        </div>
+    
         <div class="language">
           <LanguageToggle v-if="!isOpen" />
         </div>
@@ -285,9 +281,7 @@ a {
   .nav-btns > * {
     margin-left: 0;
   }
-  .nav-btns .search {
-    margin: 0;
-  }
+
 
   .open .nav-btns .nav {
     right: 0;
@@ -305,15 +299,13 @@ a {
 
   .nav-btns {
     display: grid;
-    grid-template-areas: 'search search search search search' '. language theme nav .';
+
+    grid-template-areas:  '. language theme nav .';
     align-items: center;
     justify-content: center;
     width: 100%;
   }
 
-  .search {
-    grid-area: search;
-  }
 
   .language {
     grid-area: language;

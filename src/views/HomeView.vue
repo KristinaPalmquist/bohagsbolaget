@@ -1,5 +1,4 @@
 <script setup>
-import CategoriesSmall from '@/components/CategoriesSmall.vue';
 import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
@@ -12,7 +11,6 @@ const emits = defineEmits(['productClicked']);
 const { t } = useI18n();
 const companyName = ref(t('companyName'));
 const heroRef = ref(null);
-const categoriesRef = ref(null);
 
 onMounted(() => {
   const heroElement = heroRef.value;
@@ -24,25 +22,25 @@ onMounted(() => {
     heroElement.style.height = '100vh';
   }
 
-  const categoriesElement = categoriesRef.value;
-  if (categoriesElement) {
-    const updateCategoriesWidth = () => {
-      const viewportWidth = window.innerWidth;
-      if (viewportWidth > 600) {
-        const offsetLeft = categoriesElement.offsetLeft;
-        categoriesElement.style.width = `${viewportWidth - offsetLeft}px`;
-      } else {
-        categoriesElement.style.width = '100%';
-      }
-    };
+  // const categoriesElement = categoriesRef.value;
+  // if (categoriesElement) {
+  //   const updateCategoriesWidth = () => {
+  //     const viewportWidth = window.innerWidth;
+  //     if (viewportWidth > 600) {
+  //       const offsetLeft = categoriesElement.offsetLeft;
+  //       categoriesElement.style.width = `${viewportWidth - offsetLeft}px`;
+  //     } else {
+  //       categoriesElement.style.width = '100%';
+  //     }
+  //   };
 
-    window.addEventListener('resize', updateCategoriesWidth);
-    updateCategoriesWidth();
+  //   window.addEventListener('resize', updateCategoriesWidth);
+  //   updateCategoriesWidth();
 
-    return () => {
-      window.removeEventListener('resize', updateCategoriesWidth);
-    };
-  }
+  //   return () => {
+  //     window.removeEventListener('resize', updateCategoriesWidth);
+  //   };
+  // }
 });
 </script>
 
@@ -93,12 +91,7 @@ onMounted(() => {
         </section>
       </div>
     </div>
-    <section class="categories">
-      <div class="categories-wrapper" ref="categoriesRef">
-        <h2>{{ t('home.categories.header') }}</h2>
-        <CategoriesSmall />
-      </div>
-    </section>
+    
   </div>
   <div class="empty-space"></div>
 </template>
@@ -216,15 +209,7 @@ onMounted(() => {
   margin-bottom: 1rem;
 }
 
-.categories {
-  width: 100vw;
-}
 
-.categories-wrapper {
-  width: 100%;
-  max-width: 100vw;
-  overflow: hidden;
-}
 
 @media only screen and (max-width: 950px) {
   .glass-card {

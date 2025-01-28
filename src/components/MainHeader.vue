@@ -142,7 +142,7 @@ watch(headerHeight, (newHeight) => {
   position: fixed;
   width: 100vw;
   color: var(--color-text);
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   z-index: 10;
   transition: transform 1s ease-in-out;
 }
@@ -163,7 +163,7 @@ watch(headerHeight, (newHeight) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
 }
 
 a {
@@ -172,8 +172,9 @@ a {
 }
 
 .logo {
-  width: 300px;
-  height: 50px;
+    width: 50vw;
+    height: 7vw;
+  
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -199,18 +200,19 @@ a {
 .nav-btns {
   display: flex;
   align-items: center;
+  gap: 2vw;
 }
 
 .nav-btns > * {
   margin-left: 1rem;
 }
 
-@media only screen and (min-width: 1180px) {
+/* @media only screen and (min-width: 1180px) {
   .logo {
     width: 500px;
     height: 80px;
   }
-}
+} */
 
 @media only screen and (max-width: 980px) {
   #main-header {
@@ -234,9 +236,7 @@ a {
     box-shadow: none;
     border: none;
   }
-  .header-content {
-    margin: 1rem auto;
-  }
+ 
 }
 
 @media only screen and (max-width: 780px) {
@@ -259,6 +259,13 @@ a {
     width: 80vw;
     height: 10vw;
   }
+
+  .nav-btns {
+    width: 100%;
+    justify-content: center;
+    gap: 10vw;
+    padding-top: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -267,12 +274,7 @@ a {
     margin-bottom: 0.5rem;
   }
 
-  .nav-btns {
-    width: 100%;
-    justify-content: space-evenly;
-    gap: 1rem;
-    padding-top: 0.5rem;
-  }
+
 
   .nav-btns > * {
     margin-left: 0;
@@ -289,14 +291,7 @@ a {
     width: 100%;
   }
 
-  .nav-btns {
-    display: grid;
 
-    grid-template-areas: '. language theme nav .';
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
 
   .language {
     grid-area: language;

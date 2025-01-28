@@ -22,25 +22,6 @@ onMounted(() => {
     heroElement.style.height = '100vh';
   }
 
-  // const categoriesElement = categoriesRef.value;
-  // if (categoriesElement) {
-  //   const updateCategoriesWidth = () => {
-  //     const viewportWidth = window.innerWidth;
-  //     if (viewportWidth > 600) {
-  //       const offsetLeft = categoriesElement.offsetLeft;
-  //       categoriesElement.style.width = `${viewportWidth - offsetLeft}px`;
-  //     } else {
-  //       categoriesElement.style.width = '100%';
-  //     }
-  //   };
-
-  //   window.addEventListener('resize', updateCategoriesWidth);
-  //   updateCategoriesWidth();
-
-  //   return () => {
-  //     window.removeEventListener('resize', updateCategoriesWidth);
-  //   };
-  // }
 });
 </script>
 
@@ -58,9 +39,9 @@ onMounted(() => {
           <p>
             {{ t('home.hero.text1') }}
           </p>
-          <p>
+          <!-- <p>
             {{ t('home.hero.text2') }}
-          </p>
+          </p> -->
         </div>
       </div>
     </div>

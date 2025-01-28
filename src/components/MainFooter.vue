@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n';
 const currentYear = new Date().getFullYear();
 
 const { t } = useI18n();
-const companyName = ref(t('companyName'));
+const companyName = ref(t('facts.companyName'));
 </script>
 
 <template>
@@ -39,23 +39,12 @@ const companyName = ref(t('companyName'));
       </div>
       <div class="footer-section contact">
         <h2>{{ t('footer.contact.header') }}</h2>
-        <!-- <p>
-          <span class="email"> {{ t('footer.contact.text1') }}</span>
-          info@example.com
-        </p> -->
+
         <p>
           <span class="phone"> {{ t('footer.contact.text2') }}</span>
-          {{ t('phone') }}
+          {{ t('facts.phone') }}
         </p>
       </div>
-      <!-- <div class="footer-section social">
-        <h2>{{ t('footer.social.header') }}</h2>
-        <ul>
-          <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-          <li><a href="https://x.com" target="_blank">Twitter</a></li>
-          <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        </ul>
-      </div> -->
     </div>
     <div class="footer-bottom">
       <p>{{ t('footer.bottom', { currentYear, companyName }) }}</p>
@@ -96,19 +85,14 @@ const companyName = ref(t('companyName'));
   margin-bottom: 0.5rem;
 }
 
-/* .about p {
-  font-size: 1.1rem;;
-} */
-
-.social,
-.links {
+.links,
+.contact {
   width: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.email,
 .phone {
   font-weight: bold;
 }

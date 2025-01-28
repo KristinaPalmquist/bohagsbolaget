@@ -1,14 +1,14 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, onUpdated, watch } from 'vue';
 import { useRouter } from 'vue-router';
-import { useStore } from '@/store';
+// import { useStore } from '@/store';
 import MainNavbar from '@/components/MainNavbar.vue';
 import LanguageToggle from '@/components/LanguageToggle.vue';
 import ThemeToggle from './ThemeToggle.vue';
 
 const router = useRouter();
 const route = { name: 'Home', path: '/' };
-const store = useStore();
+// const store = useStore();
 
 const isScrolled = ref(false);
 const header = ref(null);
@@ -22,7 +22,6 @@ const isDarkMode = ref(
 );
 
 const logo = computed(() => {
-  console.log(isDarkMode.value);
   return isDarkMode.value
     ? 'url("/assets/logos/white_text_transparent_bg.png")'
     : 'url("/assets/logos/black_text_transparent_bg.png")';
@@ -124,7 +123,6 @@ watch(headerHeight, (newHeight) => {
         <div class="logo" :style="{ backgroundImage: logo }"></div>
       </a>
       <div class="nav-btns">
-    
         <div class="language">
           <LanguageToggle v-if="!isOpen" />
         </div>
@@ -261,8 +259,6 @@ a {
     width: 80vw;
     height: 10vw;
   }
-
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -282,7 +278,6 @@ a {
     margin-left: 0;
   }
 
-
   .open .nav-btns .nav {
     right: 0;
     top: 0;
@@ -290,22 +285,18 @@ a {
 }
 
 @media only screen and (max-width: 420px) {
-
   .header-content {
     width: 100%;
   }
 
-
-
   .nav-btns {
     display: grid;
 
-    grid-template-areas:  '. language theme nav .';
+    grid-template-areas: '. language theme nav .';
     align-items: center;
     justify-content: center;
     width: 100%;
   }
-
 
   .language {
     grid-area: language;

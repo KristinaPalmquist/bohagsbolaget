@@ -2,8 +2,10 @@ import { createI18n } from 'vue-i18n';
 
 const messages = {
   sv: {
-    companyName: 'BohagsBolaget',
-    phone: '0123 456 789',
+    facts: {
+      companyName: 'BohagsBolaget',
+      phone: '0123 456 789',
+    },
     // Routes
     routes: {
       home: 'Hem',
@@ -16,32 +18,29 @@ const messages = {
     home: {
       header: 'Välkommen till {companyName}',
       hero: {
-        text1: 'Upptäck en skattkammare av vintage- och second-hand-möbler.',
+        text1: 'Vi köper dina personliga tillhörigheter och egendomar.',
         text2: 'Vi är glada att ha dig här!',
       },
       introduction: {
         header: 'Om oss',
-        text: 'På {companyName} brinner vi för en hållbart livsstil. Vår kurerade samling av vintage möbler erbjuder unika stilar och tidlösa pjäser som du inte hittar någon annanstans.',
+        text: 'På {companyName} är vi dedikerade till att erbjuda en smidig och respektfull tjänst för individer som vill sälja sina personliga egendomar. Vår mission är att göra processen så enkel och bekväm som möjligt.',
       },
       features: {
         header: 'Våra Funktioner',
         items: [
           {
-            title: 'Kuraterat Urval',
-            text: 'Varje artikel är noggrant utvald för att säkerställa kvalitet och stil.',
+            title: 'Enkel Process',
+            text: 'Vi erbjuder en enkel och transparent process för att sälja dina personliga egendomar.',
           },
           {
-            title: 'Hållbart Liv',
-            text: 'Genom att välja second-hand gör du en positiv inverkan på miljön.',
+            title: 'Snabb Utvärdering',
+            text: 'Vårt team ger en snabb och rättvis utvärdering av dina tillhörigheter.',
           },
           {
-            title: 'Unika Stilar',
-            text: 'Vår kollektion innehåller ett brett utbud av stilar för att passa alla smaker. Oavsett om du föredrar mid-century modern, industriell eller bohemisk stil, har vi något för alla.',
+            title: 'Respektfull Service',
+            text: 'Vi behandlar varje kund med respekt och förståelse under hela processen.',
           },
         ],
-      },
-      categories: {
-        header: 'Välj bland våra kategorier',
       },
     },
     about: {
@@ -49,10 +48,12 @@ const messages = {
       introduction: {
         text: {
           welcome:
-            'Välkommen till {companyName}, din bästa plats för att hitta  unika och tidlösa möbler för ett hem med själ. Vi främjar hållbarhet genom att ge möbler nytt liv. och erbjuder dig möbler med historia.',
+            '{companyName} grundades med målet att erbjuda en pålitlig och effektiv tjänst för att köpa personliga egendomar. Vårt team av experter är här för att hjälpa dig genom varje steg av försäljningsprocessen.',
+
           online:
-            'Under åren har vi utökat vårt sortiment och våra tjänster, vilket har nått miljömedvetna kunder över hela världen. Vi bedriver vår verksamhet uteslutande online, utan fysisk butik, vilket säkerställer att vår verksamhet är så miljövänlig som möjligt.',
-          how: 'Så här fungerar vår webbplats: Titta igenom vårt sortiment och hitta en produkt som du gillar. På varje produktsida finns ett formulär som du kan använda för att kontakta oss med frågor eller kommentarer. Detta formulär hjälper oss att koppla din fråga eller kommentar till rätt produkt, vilket säkerställer en smidig och effektiv kommunikationsprocess.',
+            'Vi bedriver vår verksamhet uteslutande online, utan fysisk butik, vilket säkerställer att vår verksamhet är så effektiv, bekväm och miljövänlig som möjligt.',
+
+          how: 'På sidan Kundrecensioner kan du läsa vad våra kunder tycker om oss och våra tjänster. Vi har även en sida med frågor och svar där du kan få svar på några av de vanligaste frågaorna. Har du ytterligare frågor? Ring oss så berättar vi mer!',
         },
       },
       content: {
@@ -63,7 +64,7 @@ const messages = {
         header: 'Våra värderingar',
         satisfaction: {
           header: 'Kundnöjdhet',
-          text: 'Vi prioriterar våra kunders behov och strävar efter att överträffa deras förväntningar vid varje köp.',
+          text: 'Vi prioriterar våra kunders behov och strävar efter att överträffa deras förväntningar vid varje försäljning.',
         },
         sustainability: {
           header: 'Hållbarhet',
@@ -75,74 +76,52 @@ const messages = {
         },
       },
     },
-    categoriesView: {
-      header: 'Kategorier',
-    },
-    products: {
-      noMatch: {
-        header: 'Inga produkter hittades som matchar din sökning',
-        text: 'Här är några tips som kanske kan hjälpa:',
-        tips1: 'Kontrollera stavningen',
-        tips2: 'Prova att använda andra sökord',
-        tips3: 'Prova en mer generell sökning',
-      },
-      header: 'Produkter',
-    },
     contact: {
       header: 'Kontakta oss',
-      sent: 'Skickat meddelande',
-      name: 'Namn',
-      email: 'E-post',
-      subject: 'Ämne (valfritt)',
-      message: 'Meddelande',
-      clear: 'Töm Alla Fält',
-      send: 'Skicka meddelande',
-      thanks: 'Tack för att du kontaktar oss! Vi återkommer snart.',
+      text: 'Har du frågor eller behöver du hjälp? Kontakta oss via telefon, så hjälper vi dig gärna.',
+    },
+    testimonials: {
+      header: 'Kundrecensioner',
+      text: 'Läs vad våra kunder säger om oss och våra tjänster.',
+    },
+    questions: {
+      header: 'Frågor och svar',
+      text: 'Här hittar du svar på vanliga frågor om våra tjänster och hur vi arbetar.',
     },
     notFound: {
       header: 'Sidan hittades inte!',
       text: 'Tyvärr, sidan du letar efter finns inte. Om du har klickat på en länk kan sidan ha tagits bort sedan länken skapades.',
       back: 'Gå tillbaka till startsidan',
-      products: 'Se alla produkter',
     },
     // Components
     button: {
       text: 'Klicka',
     },
-    search: {
-      placeholder: 'Sök produkter',
-    },
+
     footer: {
       bottom: '© {currentYear} {companyName}. Alla rättigheter förbehållna.',
       about: {
         header: 'Om oss',
-        text: 'Vi är ett företag dedikerat till att tillhandahålla de bästa produkterna och tjänsterna till våra kunder.',
+        text: 'Vi är ett företag dedikerat till att tillhandahålla de bästa tjänsterna till våra kunder.',
       },
       links: {
         header: 'Snabblänkar',
       },
       contact: {
         header: 'Kontakta oss',
-        text1: 'E-post',
         text2: 'Telefon',
       },
       social: {
         header: 'Följ oss',
       },
     },
-    // Data
-    categories: {
-      chair: 'Stolar',
-      table: 'Bord',
-      storage: 'Förvaring',
-      light: 'Belysning',
-      decor: 'Dekoration',
-    },
   },
   en: {
     // Facts
-    companyName: 'BohagsBolaget',
-    phone: '+46 123 456 789',
+    facts: {
+      companyName: 'BohagsBolaget',
+      phone: '+46 123 456 789',
+    },
     // Routes
     routes: {
       home: 'Home',
@@ -156,32 +135,29 @@ const messages = {
       header: 'Welcome to {companyName}',
       hero: {
         text1:
-          'Discover a treasure trove of vintage and second-hand furniture.',
+          'We will buy your personal belongings and estates.',
         text2: 'We are delighted to have you here!',
       },
       introduction: {
         header: 'About us',
-        text: "At {companyName }, we are passionate about sustainable living.Our curated collection of pre-loved furniture offers unique styles and timeless pieces that you won't find anywhere else.",
+        text: "At {companyName}, we are dedicated to providing a smooth and respectful service for individuals looking to sell their personal belongings. Our mission is to make the process as easy and convenient as possible.",
       },
       features: {
         header: 'Our Features',
         items: [
           {
-            title: 'Curated Selection',
-            text: 'Each item is carefully selected to ensure quality and style.',
+            title: 'Simple Process',
+            text: 'We offer a straightforward and transparent process for selling your personal belongings.',
           },
           {
-            title: 'Sustainable Living',
-            text: "By choosing second-hand, you're making a positive impact on the environment.",
-          },
+            title: 'Fast Evaluation',
+            text: 'Our team provides a quick and fair evaluation of your estates.',
+           },
           {
-            title: 'Unique Styles',
-            text: 'Our collection features a wide range of styles to suit every taste. Whether you prefer mid-century modern, industrial, or bohemian, we have something for everyone.',
+            title: 'Respectful Service',
+            text: 'We treat every customer with respect and understanding throughout the process.',
           },
         ],
-      },
-      categories: {
-        header: 'Browse our categories',
       },
     },
     about: {
@@ -189,10 +165,10 @@ const messages = {
       introduction: {
         text: {
           welcome:
-            'Welcome to {companyName}, your go-to destination for preowned furniture and decorations. Our mission is to promote sustainable living by offering a curated selection of unique and timeless pieces.',
+          '{companyName} was founded with the goal of providing a reliable and efficient service for buying personal estates. Our team of experts is here to help you through every step of the selling process.',
           online:
-            'Over the years, we have expanded our collection and services, reaching eco-conscious customers worldwide. We operate exclusively online, with no physical showroom, ensuring that our operations are as eco-friendly as possible.',
-          how: "Here's how our site works: Browse through our collection and find an item that you like. Each item page has a form that you can use to contact us with any questions or comments. This form helps us know which item your question or comment is linked to, ensuring a smooth and efficient communication process.",
+          'We operate exclusively online, with no physical showroom, ensuring that our operations are as effecient, comfortable and eco-friendly as possible.',
+          how: 'On the Customer Reviews page, you can read what our customers think about us and our services. We also have a Questions and Answers page where you can get answers to some of the most common questions. Do you have any further questions? Call us and we will tell you more!',
         },
       },
       content: {
@@ -203,7 +179,7 @@ const messages = {
         header: 'Our values',
         satisfaction: {
           header: 'Customer Satisfaction',
-          text: "We prioritize our customers' needs and strive to exceed their expectations with every purchase.",
+          text: "We prioritize our customers' needs and strive to exceed their expectations with every sale.",
         },
         sustainability: {
           header: 'Sustainability',
@@ -215,69 +191,45 @@ const messages = {
         },
       },
     },
-    categoriesView: {
-      header: 'Shop by Category',
-    },
-    products: {
-      noMatch: {
-        header: 'No products found that match your search',
-        text: 'Here are a few suggestion that might help you:',
-        tips1: 'Double check your spelling',
-        tips2: 'Try using different keywords',
-        tips3: 'Try a more general search',
-      },
-      header: 'Produkter',
-    },
+
     contact: {
       header: 'Contact us',
-      sent: 'Sent message',
-      name: 'Name',
-      email: 'Email',
-      subject: 'Subject (optional)',
-      message: 'Message',
-      clear: 'Clear Fields',
-      send: 'Send Message',
-      thanks: 'Thank you for contacting us! We will get back to you shortly.',
+     text: 'Do you have any questions or need assistance? Contact us by phone, and we will be happy to help.',
+    },
+    testimonials: {
+      header: 'Customer Reviews',
+      text: 'Read what our customers have to say about us and our services.',
+    },
+    questions: {
+      header: 'Questions and Answers',
+      text: 'Here you can find answers to common questions about our services and how we operate.',
     },
     notFound: {
       header: 'Page not found!',
       text: 'Sorry, the page you are looking for does not exist. If you clicked on a link, the page may have been removed since the link was created.',
       back: 'Go back to the start page',
-      products: 'See all products',
     },
     // Components
     button: {
       text: 'Click',
     },
-    search: {
-      placeholder: 'Search products',
-    },
+
     footer: {
       about: {
         header: 'About us',
-        text: 'We are a company dedicated to providing the best products and services to our customers.',
+        text: 'We are a company dedicated to providing the best services to our customers.',
       },
       links: {
         header: 'Quick Links',
       },
       contact: {
         header: 'Contact us',
-        text1: 'Email',
         text2: 'Phone',
       },
       social: {
         header: 'Follow us',
       },
       bottom: '© {currentYear} {companyName}. All rights reserved.',
-    },
-
-    // Data
-    categories: {
-      chair: 'Chairs',
-      table: 'Tables',
-      storage: 'Storage',
-      light: 'Lighting',
-      decor: 'Decoration',
     },
   },
 };

@@ -19,7 +19,8 @@
     var(--color-7) 99%
   );
   --light-input-border: 1px solid #ccc;
-  --light-title: url("/assets/logos/black_name_transparent_bg.png")
+  --light-title: url("/assets/logos/black_name_transparent_bg.png");
+  --light-logo-title: url("/assets/logos/green_leaf_black_text_transparent_bg.png");
 
   --vt-c-black: #181818;
   --vt-c-black-soft: #222222;
@@ -37,7 +38,8 @@
     var(--color-11) 99%
   );
   --dark-input-border: 1px solid #555;
-  --dark-title: url("/assets/logos/white_text_transparent_bg.png")
+  --dark-title: url("/assets/logos/white_text_transparent_bg.png");
+  --dark-logo-title: url("/assets/logos/white_leaf_white_text_transparent_bg.png");
 
   --vt-c-indigo: #2c3e50;
 
@@ -149,6 +151,7 @@
 
 
   --title: var(--light-title);
+  --logo-title: var(--light-logo-title);
 }
 
 [data-theme='dark'] {
@@ -179,6 +182,7 @@
 
 
   --title: var(--dark-title);
+  --logo-title: var(--darrrrrrrk-logo-title);
 
   --gradient-start: var(--black-gradient-start);
   --gradient-end: var(--black-gradient-end);

@@ -83,7 +83,6 @@ onMounted(() => {
 
 onUpdated(() => {
   updateHeaderHeight();
-  // observeThemeChange();
 });
 
 onUnmounted(() => {

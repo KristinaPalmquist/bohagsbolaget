@@ -16,7 +16,7 @@ const messages = {
     },
     // Views
     home: {
-      header: 'Välkommen till {companyName}',
+      header: 'Välkommen till',
       hero: {
         text1: 'Vi köper dina personliga tillhörigheter och egendomar.',
         text2: 'Vi är glada att ha dig här!',
@@ -132,7 +132,7 @@ const messages = {
     },
     // Views
     home: {
-      header: 'Welcome to {companyName}',
+      header: 'Welcome to',
       hero: {
         text1:
           'We will buy your personal belongings and estates.',

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
@@ -9,7 +9,7 @@ const props = defineProps({
 const emits = defineEmits(['productClicked']);
 
 const { t } = useI18n();
-const companyName = ref(t('companyName'));
+const companyName = ref(t('facts.companyName'));
 const heroRef = ref(null);
 
 onMounted(() => {
@@ -21,7 +21,6 @@ onMounted(() => {
     heroElement.style.width = '100vw';
     heroElement.style.height = '100vh';
   }
-
 });
 </script>
 
@@ -34,14 +33,15 @@ onMounted(() => {
       <div class="fade-down"></div>
       <div class="glass-card">
         <div class="hero-text">
-          
-          <h1>{{ t('home.header', { companyName }) }}</h1>
+          <h1>{{ t('home.header') }}</h1>
+          <img
+            src="@/assets/logos/white_leaf_white_text_transparent_bg.png"
+            alt="{{companyName}}"
+            class="logo-title"
+          />
           <p>
             {{ t('home.hero.text1') }}
           </p>
-          <!-- <p>
-            {{ t('home.hero.text2') }}
-          </p> -->
         </div>
       </div>
     </div>
@@ -72,7 +72,6 @@ onMounted(() => {
         </section>
       </div>
     </div>
-    
   </div>
   <div class="empty-space"></div>
 </template>
@@ -151,19 +150,35 @@ onMounted(() => {
   z-index: 2;
 }
 
-.hero-text,
-.hero-text h1,
-.hero-text p {
-  color: white;
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .hero-text h1 {
+  color: white;
   font-size: 3.5rem;
   line-height: 4.5rem;
-  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.hero-text .logo-title {
+  width: 100%;
+  /* width: clamp(500px, 50%, 900px); */
+  height: clamp(100px, 10vh, 300px);
+  height: auto;
+
+  background-size: contain;
+  background-position: center;
+  margin: 0 0.5rem 1rem;
 }
 
 .hero-text p {
+  color: white;
   font-size: 1.65rem;
   line-height: 2rem;
 }
@@ -190,18 +205,20 @@ onMounted(() => {
   margin-bottom: 1rem;
 }
 
-
-
 @media only screen and (max-width: 950px) {
   .glass-card {
-    margin-top: 2rem;;
+    margin-top: 2rem;
     padding: 1rem;
   }
-
 }
 
 @media only screen and (max-width: 600px) {
-
-
+  .hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  .glass-card {
+    width: 90%;
+  }
 }
 </style>

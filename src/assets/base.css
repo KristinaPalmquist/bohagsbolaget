@@ -19,8 +19,8 @@
     var(--color-7) 99%
   );
   --light-input-border: 1px solid #ccc;
-  --light-title: url("/assets/logos/black_name_transparent_bg.png");
-  --light-logo-title: url("/assets/logos/green_leaf_black_text_transparent_bg.png");
+  --light-title: url('/assets/logos/black_name_transparent_bg.png');
+  --light-logo-title: url('/assets/logos/green_leaf_black_text_transparent_bg.png');
 
   --vt-c-black: #181818;
   --vt-c-black-soft: #222222;
@@ -38,8 +38,8 @@
     var(--color-11) 99%
   );
   --dark-input-border: 1px solid #555;
-  --dark-title: url("/assets/logos/white_text_transparent_bg.png");
-  --dark-logo-title: url("/assets/logos/white_leaf_white_text_transparent_bg.png");
+  --dark-title: url('/assets/logos/white_text_transparent_bg.png');
+  --dark-logo-title: url('/assets/logos/white_leaf_white_text_transparent_bg.png');
 
   --vt-c-indigo: #2c3e50;
 
@@ -56,6 +56,18 @@
 
 /* semantic color variables for this project */
 :root {
+  --yellow: #d4af37; /* Golden Yellow */
+  --orange: #a0522d; /* Sienna Brown */
+  --pink: #fff5ee; /* Seashell */
+  --green: #77815c; /* Olive Green */
+  --purple: #685369; /* Mauve/Purplish */
+  --gray: #999e92; /* Grayish Green */
+  --lilac: #d9c4ba; /* Light Mauve/Brown */
+
+  --lightest: #f2f2f2; /* Light Grey */
+  --lighter: #e6e6e6; /* Off-White */
+  --darker: #282c34; /* Dark Grey */
+
   --color-1: #281b15;
   --color-2: #3c4c4f;
   --color-3: #4f443e;
@@ -125,7 +137,7 @@
   --card-color: var(--color-13);
   --background-color: #fff;
   --background-gradient: linear-gradient(190deg, #9bc7f3, #d0c5c8);
-  --footer-background-color: var(--vt-c-white-soft);
+  --footer-background-color: var(--green);
   --border-color: var(--color-7);
   --form-background: var(--color-12);
   --modal-overlay: var(--light-modal-overlay);
@@ -149,7 +161,6 @@
 
   --section-gap: 160px;
 
-
   --title: var(--light-title);
   --logo-title: var(--light-logo-title);
 }
@@ -158,7 +169,7 @@
   --card-color: var(--color-1);
   --background-color: var(--vt-c-black);
   --background-gradient: linear-gradient(190deg, #411403, var(--vt-c-black));
-  --footer-background-color: #000;
+  --footer-background-color: var(--purple);
   --border-color: var(--color-11);
   --form-background: var(--color-5);
   --modal-overlay: var(--dark-modal-overlay);
@@ -179,7 +190,6 @@
 
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-2);
-
 
   --title: var(--dark-title);
   --logo-title: var(--darrrrrrrk-logo-title);

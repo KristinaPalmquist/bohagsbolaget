@@ -2,7 +2,8 @@
 import { ref, onMounted, watchEffect } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from '@/store';
-import MainHeader from '@/components/MainHeader.vue';
+// import MainHeader from '@/components/MainHeader.vue';
+import HeaderView from './components/HeaderView.vue';
 import MainFooter from '@/components/MainFooter.vue';
 
 const router = useRouter();
@@ -50,11 +51,12 @@ watchEffect(() => {
 </script>
 
 <template>
-  <MainHeader
+  <!-- <MainHeader
     @header-height="updateMainPadding"
     @update:searchQuery="store.setSearchQuery($event)"
     @update:isOpen="isOpen = $event"
-  />
+  /> -->
+  <HeaderView />
   <main>
     <router-view
       :search-query="store.searchQuery"

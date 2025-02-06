@@ -2,7 +2,7 @@
 import { ref, computed, onMounted, onUnmounted, onUpdated, watch } from 'vue';
 import { useRouter } from 'vue-router';
 // import { useStore } from '@/store';
-import MainNavbar from '@/components/MainNavbar.vue';
+// import MainNavbar from '@/components/MainNavbar.vue';
 import LanguageToggle from '@/components/LanguageToggle.vue';
 import ThemeToggle from './ThemeToggle.vue';
 
@@ -129,7 +129,7 @@ watch(headerHeight, (newHeight) => {
           <ThemeToggle v-if="!isOpen" />
         </div>
         <div class="nav">
-          <MainNavbar @update:isOpen="isOpen = $event" />
+          <!-- <MainNavbar @update:isOpen="isOpen = $event" /> -->
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const companyName = ref(t('facts.companyName'));
       <!-- <div class="hero-image"></div> -->
 
       <div class="fade-down"></div>
-      <div class="glass-card">
+      <!-- <div class="glass-card">
         <div class="hero-text">
           <h1>{{ t('home.header') }}</h1>
           <img
@@ -33,7 +33,7 @@ const companyName = ref(t('facts.companyName'));
             {{ t('home.hero.text1') }}
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="component-container">
       <div class="intro-sections">
@@ -195,7 +195,7 @@ const companyName = ref(t('facts.companyName'));
   list-style-type: none;
   margin-bottom: 1rem;
 }
-
+/* 
 @media only screen and (max-width: 950px) {
   .glass-card {
     margin-top: 2rem;
@@ -211,5 +211,5 @@ const companyName = ref(t('facts.companyName'));
   .glass-card {
     width: 90%;
   }
-}
+} */
 </style>

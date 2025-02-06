@@ -80,8 +80,9 @@ onMounted(() => {
 }
 
 .title {
-  width: clamp(300px, 80vw, 1200px);
-  height: 20vh;
+  width: 100%;
+  /* width: clamp(300px, 80vw, 1200px); */
+  aspect-ratio: 50/7;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +97,7 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 0
 }
 
 a {
@@ -133,7 +135,7 @@ a {
   padding: 0;
 }
 
-@media only screen and (max-width: 980px) {
+/* @media only screen and (max-width: 980px) {
   #header-view {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -143,7 +145,7 @@ a {
     padding: 1rem;
     margin: 0;
   }
-}
+} */
 
 /* @media only screen and (max-width: 780px) {
   .header-content {

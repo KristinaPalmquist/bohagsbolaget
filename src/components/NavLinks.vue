@@ -96,6 +96,19 @@ a:hover {
   transform: scale(120%);
 }
 
+@media only screen and (max-width: 780px) {
+
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 /* @media only screen and (max-width: 600px) {
   #main-navbar {
     padding: 0;

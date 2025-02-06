@@ -1,40 +1,7 @@
 <script setup>
-
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-
-// const name = ref('');
-// const email = ref('');
-// const subject = ref('');
-// const message = ref('');
-// const formContent = ref({
-//   name: '',
-//   email: '',
-//   subject: '',
-//   message: '',
-// });
-
-// const showSentMessage = ref(false);
-
-// const handleSubmit = () => {
-//   formContent.value = {
-//     [t('contact.name')]: name.value,
-//     [t('contact.email')]: email.value,
-//     [t('contact.subject')]: subject.value,
-//     [t('contact.message')]: message.value,
-//   };
-//   console.log(formContent.value);
-//   showSentMessage.value = true;
-//   clearForm();
-// };
-
-// const clearForm = () => {
-//   name.value = '';
-//   email.value = '';
-//   subject.value = '';
-//   message.value = '';
-// };
 </script>
 
 <template>
@@ -45,12 +12,9 @@ const { t } = useI18n();
       <p class="phone">{{ t('contact.tel') }}: {{ t('facts.phone') }}</p>
     </div>
   </div>
-
 </template>
 
 <style scoped>
-
-
 #contact-us {
   display: flex;
   flex-direction: column;
@@ -66,9 +30,6 @@ const { t } = useI18n();
   margin-top: 1rem;
 }
 
-
-
-
 /* @media only screen and (max-width: 740px) {
   #contact-us {
     display: flex;
@@ -77,9 +38,9 @@ const { t } = useI18n();
     height: max-content;
   }
 
-  /* .contact-messages > div {
+   .contact-messages > div {
     gap: 5rem;
-  } */
+  }
   .btn-div {
     display: flex;
     flex-direction: column;

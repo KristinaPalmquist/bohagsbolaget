@@ -73,7 +73,7 @@ const companyName = ref(t('facts.companyName'));
   flex-direction: column;
   align-items: center;
 }
-
+/* 
 .hero-image {
   width: 100%;
   height: 100vh;
@@ -81,7 +81,7 @@ const companyName = ref(t('facts.companyName'));
   background-size: cover;
   background-position: center;
   border: none;
-}
+} */
 
 /* .hero::before {
   content: '';
@@ -174,9 +174,9 @@ const companyName = ref(t('facts.companyName'));
   line-height: 2rem;
 }
 
-.intro-sections {
+/* .intro-sections {
   margin-top: 100vh;
-}
+} */
 
 .features ul li {
   display: grid;

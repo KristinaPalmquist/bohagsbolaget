@@ -87,14 +87,14 @@ nav {
 
 a {
   display: inline-block;
-  color: var(--text-color);
   font-size: 1.5rem;
+  color: var(--vt-c-white);
 }
 
-a:hover {
+/* a:hover {
   font-style: normal;
   transform: scale(120%);
-}
+} */
 
 @media only screen and (max-width: 780px) {
 

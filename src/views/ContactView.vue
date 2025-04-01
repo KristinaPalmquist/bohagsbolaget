@@ -6,10 +6,15 @@ const { t } = useI18n();
 
 <template>
   <div id="contact-us">
-    <div class="component-container">
-      <h1 class="header">{{ t('contact.header') }}</h1>
-      <p class="text">{{ t('contact.text') }}</p>
-      <p class="phone">{{ t('contact.tel') }}: {{ t('facts.phone') }}</p>
+    <div class="contact-content component-container">
+      <div class="text-div">
+        <h1 class="header">{{ t('contact.header') }}</h1>
+        <p class="text">{{ t('contact.text') }}</p>
+        <p class="phone">{{ t('contact.tel') }}: {{ t('facts.phone') }}</p>
+      </div>
+      <div class="image-div">
+        <img src="../assets/img/retrophone.jpg" alt="contact" />
+      </div>
     </div>
   </div>
 </template>
@@ -21,38 +26,59 @@ const { t } = useI18n();
   align-items: center;
 }
 
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5vw;
+  margin: 4vw 0;
+}
+
+.text-div {
+  flex: 2;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .header,
+.text,
 .phone {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.text {
-  margin-top: 1rem;
+.image-div {
+  flex: 1;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
 
-/* @media only screen and (max-width: 740px) {
-  #contact-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: max-content;
-  }
+.image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
 
-   .contact-messages > div {
-    gap: 5rem;
+@media only screen and (max-width: 740px) {
+  .image-div {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 4vw;
   }
-  .btn-div {
-    display: flex;
+  .contact-content {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    height: max-content;
   }
-  .message-item {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin-bottom: 2rem;
-    gap: 0.3rem;
+  .text-div {
+    gap: 2rem;
   }
-} */
+}
 </style>

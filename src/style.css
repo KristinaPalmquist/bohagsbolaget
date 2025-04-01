@@ -53,7 +53,7 @@ section {
 
 .component-container {
   width: clamp(300px, 80vw, 1200px);
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 a {
@@ -154,10 +154,12 @@ textarea:-moz-autofill {
 
 @media (hover: hover) {
   a:hover {
-    font-size: 1.5rem;
-    font-style: italic;
-    font-weight: 200;
-    /* color: var(--accent-2-color); */
+    font-style: normal;
+    transform: scale(105%);
+    text-shadow: 0.6vw 0.6vh 1vh rgba(210, 250, 51, 1),
+      -0.6vw -0.6vh 1vh rgba(210, 250, 51, 1),
+      -0.6vw 0.6vh 1vh rgba(210, 250, 51, 1),
+      0.6vw -0.6vh 1vh rgba(210, 250, 51, 1);
   }
 }
 

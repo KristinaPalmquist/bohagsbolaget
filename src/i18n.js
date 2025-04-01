@@ -78,7 +78,7 @@ const messages = {
     },
     contact: {
       header: 'Kontakta oss',
-      text: 'Har du frågor eller behöver du hjälp? Kontakta oss via telefon, så hjälper vi dig gärna!',
+      text: 'Vill du komma igång eller har du frågor och behöver du hjälp? Kontakta oss via telefon, så hjälper vi dig gärna!',
       tel: 'Telefon',
     },
     testimonials: {
@@ -195,7 +195,7 @@ const messages = {
 
     contact: {
       header: 'Contact us',
-     text: 'Do you have any questions or need assistance? Contact us by phone, and we will be happy to help!',tel: 'Phone',
+     text: 'To get started or if you have any questions and need assistance? Contact us by phone, and we will be happy to help!',tel: 'Phone',
     },
     testimonials: {
       header: 'Customer Reviews',

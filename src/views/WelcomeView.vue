@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import ColorScheme from '@/components/ColorScheme.vue';
 
 const props = defineProps({
   searchQuery: String,
@@ -16,24 +15,6 @@ const companyName = ref(t('facts.companyName'));
 <template>
   <div id="welcome-view">
     <div class="hero">
-      <div class="fade-up"></div>
-      <ColorScheme />
-      <!-- <div class="hero-image"></div> -->
-
-      <div class="fade-down"></div>
-      <!-- <div class="glass-card">
-        <div class="hero-text">
-          <h1>{{ t('home.header') }}</h1>
-          <img
-            src="@/assets/logos/green_leaf_black_text_transparent_bg.png"
-            alt="{{companyName}}"
-            class="logo-title"
-          />
-          <p>
-            {{ t('home.hero.text1') }}
-          </p>
-        </div>
-      </div> -->
     </div>
     <div class="component-container">
       <div class="intro-sections">
@@ -73,57 +54,7 @@ const companyName = ref(t('facts.companyName'));
   flex-direction: column;
   align-items: center;
 }
-/* 
-.hero-image {
-  width: 100%;
-  height: 100vh;
-  background-image: url('@/assets/img/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  border: none;
-} */
 
-/* .hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--hero-overlay);
-} */
-/* 
-.fade-up {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 70%;
-  height: 30%;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(
-    to bottom,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
-  border: none;
-}
-
-.fade-down {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 70%;
-  height: 30%;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(
-    to top,
-    var(--gradient-start),
-    var(--gradient-end)
-  );
-  border: none;
-} */
 
 .glass-card {
   position: relative;

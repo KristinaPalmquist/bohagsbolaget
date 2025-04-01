@@ -1,6 +1,7 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 // import { useStore } from '@/store';
 // import MainNavbar from '@/components/MainNavbar.vue';
 import LanguageToggle from '@/components/LanguageToggle.vue';
@@ -11,15 +12,20 @@ import NavLinks from '@/components/NavLinks.vue';
 const router = useRouter();
 const route = { name: 'Home', path: '/' };
 
+// const store = useStore();
+
+const { t } = useI18n();
+// const companyName = ref(t('facts.companyName'));
+
 const isDarkMode = ref(
   document.documentElement.getAttribute('data-theme') === 'dark'
 );
 
-const logo = computed(() => {
-  return isDarkMode.value
-    ? 'url("/assets/logos/white_text_transparent_bg.png")'
-    : 'url("/assets/logos/black_text_transparent_bg.png")';
-});
+// const logo = computed(() => {
+//   return isDarkMode.value
+//     ? 'url("/assets/logos/white_text_transparent_bg.png")'
+//     : 'url("/assets/logos/black_text_transparent_bg.png")';
+// });
 
 const handleRouting = (event, path) => {
   event.preventDefault();
@@ -45,8 +51,8 @@ onMounted(() => {
 
 <template>
   <header id="header-view">
-    <div class="header-content component-container">
-      <div class="header-btns">
+    <div class="header-content ">
+      <!-- <div class="header-btns">
         <LanguageToggle />
         <ThemeToggle />
       </div>
@@ -63,77 +69,84 @@ onMounted(() => {
           <div class="logo" :style="{ backgroundImage: logo }"></div>
         </a>
       </div>
+    <NavLinks /> -->
 
-    <NavLinks />
+      <div class="title">
+        <a
+          :href="route.path"
+          @click="
+            (event) => {
+              handleRouting(event, route.path);
+            }
+          "
+          class="header-title"
+        >
+          {{ t('facts.companyName') }}
+        </a>
+      </div>
+      <div class="header-links component-container">
+        <NavLinks />
+        <LanguageToggle />
+        <ThemeToggle />
+      </div>
     </div>
   </header>
 </template>
 
 <style scoped>
-#header-view {
+ #header-view {
   width: 100vw;
-  color: var(--color-text);
+  color: var(--vt-c-white);
   margin: 0;
-  padding: 0;
-  z-index: 10;
-  background-color: var(--footer-background-color);
+  padding: 0.5rem;
+  background-color: var(--color-1);
+}
+
+#header-view a {
+  color: inherit;
+  text-decoration: none;
+ 
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
 .title {
   width: 100%;
-  /* width: clamp(300px, 80vw, 1200px); */
-  aspect-ratio: 50/7;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 100%; */
+  
 }
 
-.header-content {
-  width: 100%;
-  width: clamp(300px, 80vw, 1200px);
+.header-title {
+  font-size: 12vw;
+  line-height: 1;
+}
+
+.header-title:hover {
+  text-decoration: none;
+  transform: none;
+  text-shadow: none;
+}
+
+.header-links {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 0
-}
-
-a {
-  width: 100%;
-  aspect-ratio: 50/7;
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.logo {
-  width: clamp(300px, 80vw, 1200px);
-  aspect-ratio: 50/7;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.5s ease-in-out;
-}
-
-.header-content img {
-  width: 500px;
-}
-
-.company-name {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--text-color);
-}
-
-.header-btns {
-  display: flex;
-  align-items: center;
-  align-self: flex-end;
   gap: 2vw;
   margin: 0;
   padding: 0;
 }
+
+.header-links
+.main-navbar a {
+  color: inherit;
+} 
 
 /* @media only screen and (max-width: 980px) {
   #header-view {

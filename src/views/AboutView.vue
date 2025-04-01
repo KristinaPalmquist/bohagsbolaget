@@ -11,34 +11,36 @@ const companyName = ref(t('facts.companyName'));
     <div class="component-container">
       <h1 class="header-about">{{ t('about.header') }}</h1>
       <section class="introduction">
-        <!-- <div class="content-about"> -->
         <p class="content-about1">
           {{ t('about.introduction.text.welcome', { companyName }) }}
         </p>
-        <!-- <div class="empty-about1"></div> -->
-        <p class="content-about2">
-          {{ t('about.introduction.text.online') }}
-        </p>
-        <!-- <div class="empty-about2"></div> -->
-        <p class="content-about3">
-          {{ t('about.introduction.text.how') }}
-        </p>
-        <!-- <div class="empty-about3"></div> -->
-        <!-- </div> -->
-
-        <!-- <div class="image image1"></div> -->
+        <div class="intro-grid">
+          <div class="image1">
+            <img src="../assets/img/sellers.jpg" alt="" />
+          </div>
+          <p class="content-about2">
+            {{ t('about.introduction.text.online') }}
+          </p>
+          <p class="content-about3">
+            {{ t('about.introduction.text.how') }}
+          </p>
+        </div>
       </section>
 
       <section class="team">
-        <h2 class="header-team">
-          {{ t('about.content.header') }}
-        </h2>
-        <!-- <div class="empty-team1"></div> -->
-        <p class="content-team">
-          {{ t('about.content.text') }}
-        </p>
-        <!-- <div class="empty-team2"></div> -->
-        <!-- <div class="image image2"></div> -->
+        <div class="team-text">
+          <h2 class="header-team">
+            {{ t('about.content.header') }}
+          </h2>
+          <!-- <div class="empty-team1"></div> -->
+          <p class="content-team">
+            {{ t('about.content.text') }}
+          </p>
+          <!-- <div class="empty-team2"></div> -->
+        </div>
+        <div class="image2">
+          <img src="../assets/img/partners.jpg" alt="" />
+        </div>
       </section>
       <section class="values">
         <h2 class="header-values">{{ t('about.values.header') }}</h2>
@@ -60,9 +62,20 @@ const companyName = ref(t('facts.companyName'));
           </div>
           <!-- <div class="empty-values"></div> -->
         </div>
-
-        <!-- <div class="image image3"></div> -->
       </section>
+    </div>
+
+    <div class="image image3">
+      <img src="../assets/img/set.png" alt="" />
+      <img src="../assets/img/flowerplates.png" alt="" />
+      <img src="../assets/img/rockingchair.png" alt="" />
+      <img src="../assets/img/goldrimcups.png" alt="" />
+      <img src="../assets/img/whitesofa.png" alt="" />
+      <img src="../assets/img/greenglasses.png" alt="" />
+      <img src="../assets/img/whitevase.png" alt="" />
+      <img src="../assets/img/woodchair.png" alt="" />
+      <img src="../assets/img/redcup.png" alt="" />
+      <img src="../assets/img/woodtable.png" alt="" />
     </div>
   </div>
 </template>
@@ -81,20 +94,78 @@ const companyName = ref(t('facts.companyName'));
 .introduction {
   padding: 0 0 5rem 0;
   position: relative;
+}*/
+.intro-grid {
+  display: grid;
+  grid-template-areas: 'image1 content-about2' 'image1 content-about3';
+
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.team,
-.values {
+.image1 {
+  grid-area: image1;
+  /* height: 50vh; */
+  width: 50vw;
+  margin-left: -10vw;
+}
+.image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 2rem 2rem 0;
+}
+
+.content-about2 {
+  grid-area: content-about2;
+}
+.content-about3 {
+  grid-area: content-about3;
+}
+
+.team {
   padding: 5rem 0;
   position: relative;
-} */
+  display: flex;
+}
 
-/* .image {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+.team-text {
+  width: 50%;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.image2 {
+  height: 50vh;
+  width: 60vw;
+  margin-right: -10vw;
+  /* margin: 0 auto; */
+}
+.image2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.image3 {
+  height: 15vh;
+  /* grid-area: image3; */
+  /* background-image: url('../assets/img/hero.jpg'); */
+  width: 60vw;
+  /* margin-left: -20vw; */
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  margin-bottom: 2vh;
+}
+
+.image3 img {
+  height: 100%;
+  object-fit: cover;
   border-radius: 2rem;
-} */
+  mix-blend-mode: multiply;
+}
 
 /* .introduction {
   display: grid;
@@ -107,12 +178,6 @@ const companyName = ref(t('facts.companyName'));
   gap: 2.5rem;
 } */
 
-/* .introduction .image1 {
-  grid-area: image1;
-  background-image: url('../assets/img/chair/gote.jpg');
-  width: 60vw;
-  margin-left: -20vw;
-} */
 /* .introduction .content-about1 {
   grid-area: content-about1;
 } */
@@ -161,14 +226,7 @@ const companyName = ref(t('facts.companyName'));
 .team .empty-team2 {
   grid-area: empty-team2;
   height: 5vh;
-}
-
-.team .image2 {
-  grid-area: image2;
-  background-image: url('../assets/img/decor/pexel.jpg');
-  width: 70vw;
-  margin-right: -20vw;
-} */
+}*/
 
 /* .values {
   display: grid;
@@ -194,58 +252,19 @@ const companyName = ref(t('facts.companyName'));
   grid-area: empty-values;
   height: 10vh;
 }
+*/
 
-.values .image3 {
-  grid-area: image3;
-  background-image: url('../assets/img/storage/uno.jpg');
-  width: 60vw;
-  margin-left: -20vw;
-} */
-
+/* 
 @media (max-width: 768px) {
   #about-view {
     padding: 0 2rem;
   }
-  /* .introduction {
-    grid-template-areas:
-      'content-about1'
-      'image1'
-      'content-about2'
-      'content-about3';
-  }
-
-  .team {
-    grid-template-areas:
-      'header-team'
-      'content-team'
-      'image2';
-  }
-
-  .values {
-    grid-template-areas:
-      'header-values'
-      'content-values'
-      'image3';
-  } */
+ 
 
   #about-view h1 {
     text-align: center;
     padding: 1.5rem 0 0 0;
   }
-  /*
- .image1 {
- position: absolute; 
-  margin-left: 0vw;
-  left: 0%; 
-  transform: translateX(-20%);
-  } */
 
-  /* .image2 {
-
-  }
-
-  .image3 {
-
-  } */
-}
+} */
 </style>

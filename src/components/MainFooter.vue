@@ -11,7 +11,7 @@ const companyName = ref(t('facts.companyName'));
 <template>
   <footer id="main-footer">
     <div class="footer-content">
-      <div class="footer-section about">
+      <!-- <div class="footer-section about">
         <h2>{{ t('footer.about.header') }}</h2>
         <p>
           {{ t('footer.about.text') }}
@@ -36,13 +36,14 @@ const companyName = ref(t('facts.companyName'));
             <a href="/contact">{{ t('routes.contact') }}</a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <div class="footer-section contact">
         <h2>{{ t('footer.contact.header') }}</h2>
 
         <p>
-          <span class="phone"> {{ t('footer.contact.text2') }}</span>
-          {{ t('facts.phone') }}
+          <span class="phone" > {{ t('footer.contact.text2') }} &nbsp;</span>
+          <a :href="`tel:${t('facts.phone')}`" class="number">
+          {{ t('facts.phone') }}</a>
         </p>
       </div>
     </div>
@@ -54,7 +55,9 @@ const companyName = ref(t('facts.companyName'));
 
 <style scoped>
 #main-footer {
-  background-color: var(--footer-background-color);
+  /* background-color: var(--footer-background-color); */
+  background-color: var(--color-1);
+  color: #fff;
   width: 100vw;
   padding: 2rem;
   /* z-index: 10; */
@@ -72,6 +75,10 @@ const companyName = ref(t('facts.companyName'));
 .footer-section {
   flex: 1;
   margin-bottom: 2rem;
+}
+
+.footer-section h2 {
+ color: #fff;
 }
 
 .footer-section ul {
@@ -97,10 +104,14 @@ const companyName = ref(t('facts.companyName'));
   font-weight: bold;
 }
 
+.number {
+  color: #fff;
+}
+
 .footer-bottom {
   text-align: center;
   padding: 1rem 0;
-  border-top: 1px solid var(--color-text);
+  border-top: 1px solid #000;
   width: 100%;
 }
 

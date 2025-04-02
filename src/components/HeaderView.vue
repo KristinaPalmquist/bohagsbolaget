@@ -148,6 +148,9 @@ onMounted(() => {
   color: inherit;
 } 
 
+
+
+
 /* @media only screen and (max-width: 980px) {
   #header-view {
     background: rgba(255, 255, 255, 0.05);

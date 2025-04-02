@@ -1,9 +1,23 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const companyName = ref(t('facts.companyName'));
+
+const images = ref([]);
+// Dynamically load images using import.meta.glob
+const imageModules = import.meta.glob(
+  '../assets/img/objects/*.{png,jpg,jpeg,svg}'
+);
+
+// Load images asynchronously in onMounted
+onMounted(async () => {
+  const loadedImages = await Promise.all(
+    Object.values(imageModules).map((importImage) => importImage())
+  );
+  images.value = loadedImages;
+});
 </script>
 
 <template>
@@ -66,16 +80,14 @@ const companyName = ref(t('facts.companyName'));
     </div>
 
     <div class="image image3">
-      <img src="../assets/img/set.png" alt="" />
-      <img src="../assets/img/flowerplates.png" alt="" />
-      <img src="../assets/img/rockingchair.png" alt="" />
-      <img src="../assets/img/goldrimcups.png" alt="" />
-      <img src="../assets/img/whitesofa.png" alt="" />
-      <img src="../assets/img/greenglasses.png" alt="" />
-      <img src="../assets/img/whitevase.png" alt="" />
-      <img src="../assets/img/woodchair.png" alt="" />
-      <img src="../assets/img/redcup.png" alt="" />
-      <img src="../assets/img/woodtable.png" alt="" />
+      <div
+        class="image3individual"
+        v-for="(image, index) in images"
+        :key="index"
+      >
+        <img :src="image.default" alt="Object Image" />
+      </div>
+      
     </div>
   </div>
 </template>
@@ -90,11 +102,7 @@ const companyName = ref(t('facts.companyName'));
 .header-about {
   margin-bottom: 2rem;
 }
-/* 
-.introduction {
-  padding: 0 0 5rem 0;
-  position: relative;
-}*/
+
 .intro-grid {
   display: grid;
   grid-template-areas: 'image1 content-about2' 'image1 content-about3';
@@ -105,7 +113,6 @@ const companyName = ref(t('facts.companyName'));
 
 .image1 {
   grid-area: image1;
-  /* height: 50vh; */
   width: 50vw;
   margin-left: -10vw;
 }
@@ -150,10 +157,7 @@ const companyName = ref(t('facts.companyName'));
 
 .image3 {
   height: 15vh;
-  /* grid-area: image3; */
-  /* background-image: url('../assets/img/hero.jpg'); */
   width: 60vw;
-  /* margin-left: -20vw; */
   display: flex;
   flex-direction: row;
   background-color: #fff;

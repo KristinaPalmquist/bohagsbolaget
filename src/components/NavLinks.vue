@@ -50,11 +50,7 @@ const handleRouting = (event, path) => {
         @click="handleRouting($event, route.path)"
         :style="navbarItemStyle"
       > -->
-        <a
-          href="#"
-          @click="handleRouting($event, route.path)"
-          :style="navbarItemStyle"
-        >
+        <a href="#" @click="handleRouting($event, route.path)">
           <span class="navbar-item"> {{ route.name }}</span>
         </a>
       </div>
@@ -97,8 +93,6 @@ a {
 } */
 
 @media only screen and (max-width: 780px) {
-
-
   nav {
     display: flex;
     flex-direction: column;

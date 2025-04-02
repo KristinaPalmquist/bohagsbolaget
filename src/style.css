@@ -156,10 +156,10 @@ textarea:-moz-autofill {
   a:hover {
     font-style: normal;
     transform: scale(105%);
-    text-shadow: 0.6vw 0.6vh 1vh rgba(210, 250, 51, 1),
-      -0.6vw -0.6vh 1vh rgba(210, 250, 51, 1),
-      -0.6vw 0.6vh 1vh rgba(210, 250, 51, 1),
-      0.6vw -0.6vh 1vh rgba(210, 250, 51, 1);
+    text-shadow: 0.6vw 0.6vh 1vh rgba(210, 250, 51, 0.7),
+      -0.6vw -0.6vh 1vh rgba(210, 250, 51, 0.7),
+      -0.6vw 0.6vh 1vh rgba(210, 250, 51, 0.7),
+      0.6vw -0.6vh 1vh rgba(210, 250, 51, 0.7);
   }
 }
 

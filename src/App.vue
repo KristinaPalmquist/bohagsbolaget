@@ -20,7 +20,7 @@ const store = useStore();
 //   } else
 //   if (mainElement.value && !isOpen.value) {
 //     mainElement.value.style.paddingTop = `${headerHeight.value}px`;
-//   } 
+//   }
 // };
 
 // onMounted(() => {
@@ -30,7 +30,7 @@ const store = useStore();
 //   } else
 //   if (mainElement.value && !isOpen.value) {
 //     mainElement.value.style.paddingTop = `${headerHeight.value}px`;
-//   } 
+//   }
 //   isMobile.value = window.matchMedia('(max-width: 768px)').matches;
 // });
 
@@ -46,7 +46,7 @@ const store = useStore();
 //   } else
 //   if (mainElement.value && !isOpen.value) {
 //     mainElement.value.style.paddingTop = `${headerHeight.value}px`;
-//   } 
+//   }
 // });
 </script>
 
@@ -69,6 +69,6 @@ const store = useStore();
 <style scoped>
 main {
   min-height: 50vh;
-}
 
+}
 </style>

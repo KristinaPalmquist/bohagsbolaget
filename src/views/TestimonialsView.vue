@@ -2,27 +2,30 @@
 const testimonials = [
   {
     id: 1,
-    name: 'John Doe',
-    position: 'CEO, Company',
-    image:
-      'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
-    quote: 'This is an amazing product! It has changed my life for the better.',
+    name: 'Kenny Johnson',
+    // position: 'CEO, Company',
+    city: 'Sundbyberg',
+    image: new URL('@/assets/img/customers/kenny.jpg', import.meta.url).href,
+    quote:
+      'Underbart att få så proffsig hjälp när jag behövde tömma ett helt hus.',
   },
   {
     id: 2,
-    name: 'Jane Smithsonian',
-    position: 'CTO, Another Company',
-    image:
-      'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
-    quote: 'I love using this product. It has made my work so much easier.',
+    name: 'Alina Smith',
+    // position: 'CTO, Another Company',
+    city: 'Huddinge',
+    image: new URL('@/assets/img/customers/alina.jpg', import.meta.url).href,
+    quote:
+      'Jag skulle anlita Bohagsbolaget igen vilken dag i veckan som helst.',
   },
   {
     id: 3,
-    name: 'Sammy Wilson',
-    position: 'Developer, Tech Company',
-    image:
-      'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png',
-    quote: 'A must-have tool for any professional. Highly recommended!',
+    name: 'Alex Thompson',
+    // position: 'Developer, Tech Company',
+    city: 'Stockholm',
+    image: new URL('@/assets/img/customers/alex.jpg', import.meta.url).href,
+    quote:
+      'När morsan gick bort orkade jag inte ta itu med allt det praktiska och var glad att jag hittade Bohagsbolaget!',
   },
 ];
 </script>
@@ -31,8 +34,8 @@ const testimonials = [
   <div id="testimonials-section">
     <div class="component-container">
       <div class="header">
-        <h2>Customer Reviews</h2>
-        <p>What our customers are saying</p>
+        <h2>Kundomdömen</h2>
+        <p>Vad några av våra kunder säger</p>
       </div>
       <div class="testimonials-grid">
         <div
@@ -44,7 +47,7 @@ const testimonials = [
             <img :src="testimonial.image" alt="" class="testimonial-image" />
             <div class="testimonial-info">
               <p class="testimonial-name">{{ testimonial.name }}</p>
-              <p class="testimonial-position">{{ testimonial.position }}</p>
+              <p class="testimonial-city">{{ testimonial.city }}</p>
             </div>
           </div>
           <p class="testimonial-quote">{{ testimonial.quote }}</p>
@@ -56,8 +59,8 @@ const testimonials = [
 
 <style scoped>
 #testimonials-section {
-  background-color: #f7fafc;
-  /* padding: 3rem 0; */
+  background-color: var(--pink);
+  padding: 1rem 0;
 }
 
 .header {
@@ -99,20 +102,22 @@ const testimonials = [
 .testimonial-card {
   background-color: #fff;
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-header {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .testimonial-image {
-  width: 3rem;
-  height: 3rem;
+  width: 10vw;
+  height: 10vw;
   border-radius: 50%;
   object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 .testimonial-info {
@@ -123,11 +128,13 @@ const testimonials = [
   font-size: 1.125rem;
   font-weight: 500;
   color: #2d3748;
+  margin-bottom: 0;
 }
 
-.testimonial-position {
+.testimonial-city {
   font-size: 0.875rem;
   color: #718096;
+  margin-bottom: 0;
 }
 
 .testimonial-quote {

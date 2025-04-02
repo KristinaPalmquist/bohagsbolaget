@@ -4,20 +4,20 @@ import { ref } from 'vue';
 const questions = ref([
   {
     id: 1,
-    question: 'What is Vue.js?',
+    question: 'Vad gör Bohagsbolaget?',
     answer:
-      'Vue.js is a progressive JavaScript framework for building user interfaces.',
+      'Vi köper hela bohag, t.ex. dödsbon, och tar hand om transport m.m..',
   },
   {
     id: 2,
-    question: 'How do I install Vue.js?',
-    answer: 'You can install Vue.js via npm by running `npm install vue`.',
+    question: 'Hur funkar det?',
+    answer:
+      'Vi kommer tillsammans överens om en tidpunkt där vi kommer och går igenom bohaget. Sedan ger vi dig ett prisförslag på helheten som du väljer om du vill acceptera.',
   },
   {
     id: 3,
-    question: 'What is the Vue CLI?',
-    answer:
-      'The Vue CLI is a command-line interface tool that helps you to scaffold and manage Vue.js projects.',
+    question: 'Vad gör jag om jag har frågor?',
+    answer: 'Ring oss så svarar vi på alla frågor och funderingar!',
   },
 ]);
 </script>
@@ -26,13 +26,13 @@ const questions = ref([
   <div id="qa-section">
     <div class="component-container">
       <div class="header">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Frågor och svar</h2>
       </div>
       <div class="qa-list">
-        <div v-for="item in questions" :key="item.id" class="qa-item">
-          <h3 class="qa-question">{{ item.question }}</h3>
+        <details v-for="item in questions" :key="item.id" class="qa-item">
+          <summary class="qa-question">{{ item.question }}</summary>
           <p class="qa-answer">{{ item.answer }}</p>
-        </div>
+        </details>
       </div>
     </div>
   </div>
@@ -43,7 +43,6 @@ const questions = ref([
   background-color: #f7fafc;
   padding: 3rem 0;
 }
-
 
 .header {
   text-align: center;

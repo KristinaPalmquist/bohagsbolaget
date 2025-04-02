@@ -19,7 +19,7 @@ const toggleLanguage = () => {
     <!-- <button @click="toggleLanguage">
       {{ currentLanguage === 'sv' ? '' : '' }}
     </button> -->
-    <button @click="toggleLanguage">
+    <button @click="toggleLanguage" class="flag">
       {{ currentLanguage === 'sv' ? '🇸🇪' : '🇬🇧' }}
     </button>
   </div>
@@ -32,7 +32,7 @@ const toggleLanguage = () => {
   align-items: center;
 }
 
-#language-toggle button {
+.flag {
   background: transparent;
   border: none;
   padding: 0;
@@ -44,8 +44,10 @@ const toggleLanguage = () => {
 
 #language-toggle:hover {
   animation: wiggle 0.5s ease-in-out;
-  color: var(--color-primary);
+  /* color: var(--color-primary); */
 }
+
+
 
 @keyframes wiggle {
   0% {

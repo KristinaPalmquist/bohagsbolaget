@@ -35,8 +35,8 @@ const toggleLanguage = () => {
 .flag {
   background: transparent;
   border: none;
+  margin: 0 !important;
   padding: 0;
-  /* padding: 0.5rem 1rem; */
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -46,8 +46,6 @@ const toggleLanguage = () => {
   animation: wiggle 0.5s ease-in-out;
   /* color: var(--color-primary); */
 }
-
-
 
 @keyframes wiggle {
   0% {

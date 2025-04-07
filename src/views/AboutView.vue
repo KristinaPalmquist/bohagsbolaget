@@ -46,11 +46,9 @@ onMounted(async () => {
           <h2 class="header-team">
             {{ t('about.content.header') }}
           </h2>
-          <!-- <div class="empty-team1"></div> -->
           <p class="content-team">
             {{ t('about.content.text') }}
           </p>
-          <!-- <div class="empty-team2"></div> -->
         </div>
         <div class="image2">
           <img src="../assets/img/partners.jpg" alt="" />
@@ -74,7 +72,7 @@ onMounted(async () => {
               {{ t('about.values.integrity.text') }}
             </p>
           </div>
-          <!-- <div class="empty-values"></div> -->
+    
         </div>
       </section>
     </div>
@@ -138,7 +136,7 @@ onMounted(async () => {
 
 .team-text {
   width: 50%;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   position: relative;
 }
 
@@ -146,7 +144,7 @@ onMounted(async () => {
   height: 50vh;
   width: 60vw;
   margin-right: -10vw;
-  /* margin: 0 auto; */
+  margin-left: 2vw;
 }
 .image2 img {
   width: 100%;
@@ -171,104 +169,12 @@ onMounted(async () => {
   mix-blend-mode: multiply;
 }
 
-/* .introduction {
-  display: grid;
-  grid-template-areas:
-    'content-about1 content-about1'
-    'image1 empty-about1' 'image1 content-about2'
-    'image1 empty-about2'
-    'image1 content-about3'
-    'empty-about3 content-about3';
-  gap: 2.5rem;
-} */
 
-/* .introduction .content-about1 {
-  grid-area: content-about1;
-} */
-/* .introduction .empty-about1 {
-  grid-area: empty-about1;
-  height: 10vh;
-} */
-/* .introduction .content-about2 {
-  grid-area: content-about2;
-} */
-/* .introduction .empty-about2 {
-  grid-area: empty-about2;
-  height: 5vh;
-} */
-/* .introduction .content-about3 {
-  grid-area: content-about3;
-} */
 
-/* .introduction .empty-about3 {
-  height: 5vh;
-} */
-/* 
-.team {
-  display: grid;
-  grid-template-areas:
-    'empty-team1 image2'
-    'header-team image2'
-    'content-team image2'
-    'empty-team2 image2';
-  gap: 2.5rem;
-}
 
-.team .header-team {
-  grid-area: header-team;
-}
-
-.team .empty-team1 {
-  grid-area: empty-team1;
-  height: 15vh;
-}
-
-.team .content-team {
-  grid-area: content-team;
-}
-
-.team .empty-team2 {
-  grid-area: empty-team2;
-  height: 5vh;
-}*/
-
-/* .values {
-  display: grid;
-  grid-template-areas:
-    'image3 header-values'
-    'image3 content-values'
-    'image3 empty-values';
-  gap: 2.5rem;
-}
-
-.values .header-values {
-  grid-area: header-values;
-}
-
-.values .content-values {
-  grid-area: content-values;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.values .empty-values {
-  grid-area: empty-values;
-  height: 10vh;
-}
-*/
-
-/* 
 @media (max-width: 768px) {
   #about-view {
-    padding: 0 2rem;
+    padding: 0 2vw;
   }
- 
-
-  #about-view h1 {
-    text-align: center;
-    padding: 1.5rem 0 0 0;
-  }
-
-} */
+}
 </style>

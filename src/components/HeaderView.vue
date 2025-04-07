@@ -4,8 +4,8 @@ import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 // import { useStore } from '@/store';
 // import MainNavbar from '@/components/MainNavbar.vue';
-import LanguageToggle from '@/components/LanguageToggle.vue';
-import ThemeToggle from './ThemeToggle.vue';
+// import LanguageToggle from '@/components/LanguageToggle.vue';
+// import ThemeToggle from './ThemeToggle.vue';
 
 import NavLinks from '@/components/NavLinks.vue';
 
@@ -86,8 +86,8 @@ onMounted(() => {
       </div>
       <div class="header-links component-container">
         <NavLinks />
-        <LanguageToggle />
-        <ThemeToggle />
+        <!-- <LanguageToggle />
+        <ThemeToggle /> -->
       </div>
     </div>
   </header>

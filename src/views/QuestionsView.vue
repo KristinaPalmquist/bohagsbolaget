@@ -42,6 +42,9 @@ const questions = ref([
 #qa-section {
   background-color: #f7fafc;
   padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {

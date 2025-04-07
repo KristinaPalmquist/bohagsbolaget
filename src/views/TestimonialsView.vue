@@ -3,7 +3,6 @@ const testimonials = [
   {
     id: 1,
     name: 'Kenny Johnson',
-    // position: 'CEO, Company',
     city: 'Sundbyberg',
     image: new URL('@/assets/img/customers/kenny.jpg', import.meta.url).href,
     quote:
@@ -12,7 +11,6 @@ const testimonials = [
   {
     id: 2,
     name: 'Alina Smith',
-    // position: 'CTO, Another Company',
     city: 'Huddinge',
     image: new URL('@/assets/img/customers/alina.jpg', import.meta.url).href,
     quote:
@@ -21,7 +19,6 @@ const testimonials = [
   {
     id: 3,
     name: 'Alex Thompson',
-    // position: 'Developer, Tech Company',
     city: 'Stockholm',
     image: new URL('@/assets/img/customers/alex.jpg', import.meta.url).href,
     quote:
@@ -61,6 +58,11 @@ const testimonials = [
 #testimonials-section {
   background-color: var(--pink);
   padding: 1rem 0;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .header {
@@ -68,35 +70,10 @@ const testimonials = [
   margin-bottom: 2rem;
 }
 
-/* .header h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  text-transform: uppercase;
-} */
-
-/* .header p {
-  margin-top: 0.5rem;
-  font-size: 2rem;
-  font-weight: 800;
-  color: #2d3748;
-} */
-
 .testimonials-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3vw;
 }
 
 .testimonial-card {

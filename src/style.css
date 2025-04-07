@@ -53,8 +53,14 @@ section {
 
 .component-container {
   width: clamp(300px, 80vw, 1200px);
-  margin: 1rem auto;
 }
+
+/* @media (max-width: 500px) {
+  .component-container {
+   width: 100%;
+  }
+} */
+
 
 a {
   text-decoration: none;

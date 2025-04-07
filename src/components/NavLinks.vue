@@ -32,10 +32,10 @@ const handleRouting = (event, path) => {
           <span class="navbar-item"> {{ route.name }}</span>
         </a>
       </div>
-      <LanguageToggle />
-      <ThemeToggle />
+      <!-- <LanguageToggle />
+      <ThemeToggle /> -->
     </nav>
-    <nav id="two-row-menu">
+    <!-- <nav id="two-row-menu">
       <div class="row-one">
         <div class="link" v-for="route in routes" :key="route.name">
           <a href="#" @click="handleRouting($event, route.path)">
@@ -43,29 +43,29 @@ const handleRouting = (event, path) => {
           </a>
         </div>
       </div>
-      <div class="row-two">
+    <div class="row-two">
         <LanguageToggle />
         <ThemeToggle />
-      </div>
-    </nav>
+      </div> 
+    </nav> -->
     <nav id="hidden-menu">
       <div class="link" v-for="route in routes" :key="route.name">
         <a href="#" @click="handleRouting($event, route.path)">
           <span class="navbar-item"> {{ route.name }}</span>
         </a>
       </div>
-      <div id="icons">
+      <!-- <div id="icons">
         <LanguageToggle />
         <ThemeToggle />
-      </div>
+      </div> -->
     </nav>
   </div>
 </template>
 
 <style scoped>
-/* #main-navbar {
-  padding: 0.5vh 0;
-} */
+#main-navbar {
+  padding-bottom: 2vh;
+}
 
 #full-menu {
   width: 100%;
@@ -74,11 +74,12 @@ const handleRouting = (event, path) => {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1.5vh;
 }
 
-#two-row-menu {
+/* #two-row-menu {
   display: none;
-}
+} */
 
 #hidden-menu {
   display: none;
@@ -103,7 +104,7 @@ a {
   gap: 1rem;
 }
 
-@media only screen and (max-width: 1080px) {
+/* @media only screen and (max-width: 1080px) {
   #full-menu {
     display: none;
   }
@@ -131,7 +132,7 @@ a {
   .navbar-item {
     font-size: 2.4vw;
   }
-}
+} */
 
 @media only screen and (max-width: 780px) {
   #full-menu {

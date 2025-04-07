@@ -21,9 +21,12 @@ const { t } = useI18n();
 
 <style scoped>
 #contact-us {
+  height: 100%;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .contact-content {
@@ -33,6 +36,7 @@ const { t } = useI18n();
   justify-content: space-between;
   gap: 5vw;
   margin: 4vw 0;
+  padding: 20px 0;
 }
 
 .text-div {

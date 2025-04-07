@@ -72,12 +72,11 @@ onMounted(async () => {
               {{ t('about.values.integrity.text') }}
             </p>
           </div>
-    
         </div>
       </section>
     </div>
 
-    <div class="image image3">
+    <div class="image3">
       <div
         class="image3individual"
         v-for="(image, index) in images"
@@ -85,7 +84,6 @@ onMounted(async () => {
       >
         <img :src="image.default" alt="Object Image" />
       </div>
-      
     </div>
   </div>
 </template>
@@ -94,7 +92,10 @@ onMounted(async () => {
 #about-view {
   width: 100%;
   overflow: hidden;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   padding: 0;
 }
 .header-about {
@@ -155,11 +156,11 @@ onMounted(async () => {
 
 .image3 {
   height: 15vh;
-  width: 60vw;
-  display: flex;
-  flex-direction: row;
   background-color: #fff;
   margin-bottom: 2vh;
+    display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
 }
 
 .image3 img {
@@ -168,9 +169,6 @@ onMounted(async () => {
   border-radius: 2rem;
   mix-blend-mode: multiply;
 }
-
-
-
 
 @media (max-width: 768px) {
   #about-view {

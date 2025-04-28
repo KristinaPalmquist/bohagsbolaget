@@ -14,8 +14,7 @@ const companyName = ref(t('facts.companyName'));
 
 <template>
   <div id="welcome-view">
-    <div class="hero">
-    </div>
+    <div class="hero"></div>
     <div class="component-container">
       <div class="intro-sections">
         <section class="introduction">
@@ -55,12 +54,8 @@ const companyName = ref(t('facts.companyName'));
   align-items: center;
 }
 
-
 .glass-card {
   position: relative;
-  /* top: 50%; */
-  /* left: 50%;
-  transform: translate(-50%, -50%); */
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -90,7 +85,6 @@ const companyName = ref(t('facts.companyName'));
 
 .hero-text .logo-title {
   width: 100%;
-  /* width: clamp(500px, 50%, 900px); */
   height: clamp(100px, 10vh, 300px);
   height: auto;
 
@@ -104,10 +98,6 @@ const companyName = ref(t('facts.companyName'));
   font-size: 1.65rem;
   line-height: 2rem;
 }
-
-/* .intro-sections {
-  margin-top: 100vh;
-} */
 
 .features ul li {
   display: grid;
@@ -126,21 +116,4 @@ const companyName = ref(t('facts.companyName'));
   list-style-type: none;
   margin-bottom: 1rem;
 }
-/* 
-@media only screen and (max-width: 950px) {
-  .glass-card {
-    margin-top: 2rem;
-    padding: 1rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .hero-text h1 {
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-  }
-  .glass-card {
-    width: 90%;
-  }
-} */
 </style>

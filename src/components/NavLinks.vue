@@ -2,8 +2,6 @@
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-// import LanguageToggle from '@/components/LanguageToggle.vue';
-// import ThemeToggle from './ThemeToggle.vue';
 
 const { t } = useI18n();
 const emit = defineEmits(['update:isOpen']);
@@ -55,22 +53,8 @@ onMounted(() => {
           <span class="navbar-item"> {{ route.name }}</span>
         </a>
       </div>
-      <!-- <LanguageToggle />
-      <ThemeToggle /> -->
     </nav>
-    <!-- <nav id="two-row-menu">
-      <div class="row-one">
-        <div class="link" v-for="route in routes" :key="route.name">
-          <a href="#" @click="handleRouting($event, route.path)">
-            <span class="navbar-item"> {{ route.name }}</span>
-          </a>
-        </div>
-      </div>
-    <div class="row-two">
-        <LanguageToggle />
-        <ThemeToggle />
-      </div> 
-    </nav> -->
+
     <nav id="hidden-menu">
       <details class="menu-details">
         <summary class="arrow">
@@ -83,11 +67,6 @@ onMounted(() => {
               <span class="navbar-item"> {{ route.name }}</span>
             </a>
           </div>
-
-          <!-- <div id="icons">
-        <LanguageToggle />
-        <ThemeToggle />
-      </div> -->
         </div>
       </details>
     </nav>
@@ -210,7 +189,6 @@ details[open] .details-content {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    /* padding-bottom: 1rem; */
   }
 
   .menu-details {

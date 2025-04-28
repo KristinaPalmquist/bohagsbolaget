@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-// import { useI18n } from 'vue-i18n';
 
 export const useStore = defineStore('main', {
   state: () => ({
@@ -17,9 +16,8 @@ export const useStore = defineStore('main', {
     resetSearchQuery() {
       this.searchQuery = '';
     },
-    setLanguage(language,locale) {
+    setLanguage(language, locale) {
       this.language = language;
-      // const { locale } = useI18n();
       locale.value = language;
     },
   },

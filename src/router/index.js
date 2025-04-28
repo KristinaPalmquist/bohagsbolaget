@@ -13,11 +13,6 @@ const routes = [
     name: 'Welcome',
     component: WelcomeView,
   },
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: HomeView,
-  // },
   {
     path: '/about',
     component: AboutView,
@@ -42,7 +37,6 @@ const routes = [
     component: NotFound,
   },
 ];
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

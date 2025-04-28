@@ -11,39 +11,14 @@ const companyName = ref(t('facts.companyName'));
 <template>
   <footer id="main-footer">
     <div class="footer-content">
-      <!-- <div class="footer-section about">
-        <h2>{{ t('footer.about.header') }}</h2>
-        <p>
-          {{ t('footer.about.text') }}
-        </p>
-      </div>
-      <div class="footer-section links">
-        <h2>{{ t('footer.links.header') }}</h2>
-        <ul>
-          <li>
-            <a href="/">{{ t('routes.home') }}</a>
-          </li>
-          <li>
-            <a href="/about">{{ t('routes.about') }}</a>
-          </li>
-          <li>
-            <a href="/testimonials">{{ t('routes.testimonials') }}</a>
-          </li>
-          <li>
-            <a href="/questions">{{ t('routes.questions') }}</a>
-          </li>
-          <li>
-            <a href="/contact">{{ t('routes.contact') }}</a>
-          </li>
-        </ul>
-      </div> -->
       <div class="footer-section contact">
         <h2>{{ t('footer.contact.header') }}</h2>
 
         <p>
-          <span class="phone" > {{ t('footer.contact.text2') }} &nbsp;</span>
+          <span class="phone"> {{ t('footer.contact.text2') }} &nbsp;</span>
           <a :href="`tel:${t('facts.phone')}`" class="number">
-          {{ t('facts.phone') }}</a>
+            {{ t('facts.phone') }}</a
+          >
         </p>
       </div>
     </div>
@@ -55,12 +30,10 @@ const companyName = ref(t('facts.companyName'));
 
 <style scoped>
 #main-footer {
-  /* background-color: var(--footer-background-color); */
   background-color: var(--color-1);
   color: #fff;
   width: 100vw;
   padding: 2rem;
-  /* z-index: 10; */
   display: flex;
   flex-direction: column;
 }
@@ -78,7 +51,7 @@ const companyName = ref(t('facts.companyName'));
 }
 
 .footer-section h2 {
- color: #fff;
+  color: #fff;
 }
 
 .footer-section ul {
